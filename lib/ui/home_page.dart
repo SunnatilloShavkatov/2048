@@ -66,7 +66,6 @@ class _HomePageState extends State<HomePage> {
 
   void handleGesture(int direction) {
     /*
-
       0 = up
       1 = down
       2 = left
@@ -188,6 +187,7 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Color(MyColor.gridBackground),
+        toolbarHeight: 60,
       ),
       body: SingleChildScrollView(
         child: Padding(
