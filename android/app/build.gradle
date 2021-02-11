@@ -26,13 +26,15 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
     compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+    ndkVersion '22.0.7026061'
 
     lintOptions {
         disable 'InvalidPackage'
     }
 
     defaultConfig {
-        applicationId "com.quanticuz.game2048"
+        applicationId "uz.quantic.game2048"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
@@ -41,9 +43,12 @@ android {
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
+        
+            minifyEnabled true
+            useProguard true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
