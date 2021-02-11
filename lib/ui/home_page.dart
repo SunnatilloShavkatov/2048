@@ -187,6 +187,7 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Color(MyColor.gridBackground),
+        elevation: 1.0,
         toolbarHeight: 60,
       ),
       body: SingleChildScrollView(
@@ -208,7 +209,7 @@ class _HomePageState extends State<HomePage> {
                       Padding(
                         padding: EdgeInsets.only(top: 10.0, bottom: 2.0),
                         child: Text(
-                          'Score',
+                          'Hisob',
                           style: TextStyle(
                               fontSize: 15.0,
                               color: Colors.white70,
@@ -220,9 +221,10 @@ class _HomePageState extends State<HomePage> {
                         child: Text(
                           '$score',
                           style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,),
+                            fontSize: 20.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       )
                     ],
@@ -267,7 +269,7 @@ class _HomePageState extends State<HomePage> {
                             color: Color(MyColor.transparentWhite),
                             child: Center(
                               child: Text(
-                                'Game over!',
+                                "O'yin tamom!",
                                 style: TextStyle(
                                     fontSize: 30.0,
                                     fontWeight: FontWeight.bold,
@@ -282,7 +284,7 @@ class _HomePageState extends State<HomePage> {
                             color: Color(MyColor.transparentWhite),
                             child: Center(
                               child: Text(
-                                'You Won!',
+                                'Yutdingiz!',
                                 style: TextStyle(
                                     fontSize: 30.0,
                                     fontWeight: FontWeight.bold,
@@ -337,7 +339,7 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: <Widget>[
                             Text(
-                              'High Score',
+                              'Yuqori ball',
                               style: TextStyle(
                                   color: Colors.white70,
                                   fontWeight: FontWeight.bold),
