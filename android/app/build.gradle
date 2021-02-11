@@ -22,12 +22,18 @@ if (flutterVersionName == null) {
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
     compileSdkVersion 30
     buildToolsVersion '30.0.3'
     ndkVersion '22.0.7026061'
+
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 
     lintOptions {
         disable 'InvalidPackage'
@@ -44,7 +50,7 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.debug
-        
+
             minifyEnabled true
             useProguard true
             shrinkResources true
@@ -55,4 +61,8 @@ android {
 
 flutter {
     source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
